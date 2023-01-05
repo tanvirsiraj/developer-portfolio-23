@@ -33,6 +33,25 @@ body {
     margin-right: auto;
 }
 
+section {
+    margin: 130px 0;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    color: #181818;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    font-size: 18px;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
 /* header styles  */
 header {
     background: #FFF8F3;
@@ -69,6 +88,7 @@ header {
     font-size: 20px;
     color: #474747;
 }
+
 
 /* header banner  */
 .header-banner {
@@ -120,4 +140,29 @@ header {
 .banner-img {
     position: relative;
     left: 20%;
+}
+
+/* about section styles  */
+.about {
+    background: #FFF8F3;
+    border-radius: 10px;
+    padding: 130px 156px;
+}
+
+.about-info-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-info-name {
+    font-size: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.about-info-value {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #474747;
 }
