@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #FD6E0A;
+    --secondary-color: #757575;
+    --light-color: #fff;
+    --dark-color: #000;
+}
+
+.primary-btn {
+    background: #FD6E0A;
+    border-radius: 5px;
+    padding: 18px 36px;
+    color: var(--light-color);
+    font-weight: 700;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header styles  */
+header {
+    background: #FFF8F3;
+    background-image: url('../images/header_bg.png'), url('../images/developer.png');
+    background-repeat: no-repeat;
+    background-position: bottom right, 50px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.nav-logo span {
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: #474747;
+}
+
+/* header banner  */
+.header-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-sub-title {
+    font-weight: 600;
+    font-size: 45px;
+    color: #474747;
+    margin-bottom: 5px;
+}
+
+.banner-title {
+    font-weight: 700;
+    font-size: 85px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+.banner-description {
+    font-size: 18px;
+}
+
+.banner-btn {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.banner-btn a {
+    text-decoration: none;
+}
+
+.banner-btn a:last-child {
+    background: var(--light-color);
+    color: var(--primary-color);
+    border: 1px solid #FD6E0A;
+    border-radius: 5px;
+}
+
+.banner-btn a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.banner-img {
+    position: relative;
+    left: 20%;
+}
