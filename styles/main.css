@@ -11,7 +11,7 @@ body {
 }
 
 img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 :root {
@@ -249,4 +249,65 @@ header {
 .resume-description {
     color: var(--secondary-color);
     margin-bottom: 30px;
+}
+
+.resume-btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.resume-btn a {
+    text-decoration: none;
+}
+
+/* footer styles */
+footer {
+    background: #FFF8F3;
+    padding: 130px 0;
+    margin-bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 117px;
+    justify-content: space-between;
+}
+
+.footer-title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 35px;
+    color: #181818;
+}
+
+.footer-description {
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.footer-icon {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-icon a {
+    text-decoration: none;
+}
+
+.footer-container form input,
+textarea,
+button {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    padding: 18px 30px;
+}
+
+.footer-container form input {
+    display: block;
+    width: 100%;
+}
+
+.footer-container button {
+    cursor: pointer;
 }
