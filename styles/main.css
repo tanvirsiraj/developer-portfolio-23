@@ -85,6 +85,8 @@ header {
 .nav-menu {
     list-style: none;
     display: flex;
+    justify-self: center;
+    align-items: center;
     gap: 50px;
 }
 
@@ -94,12 +96,24 @@ header {
     color: #474747;
 }
 
+#bar,
+#close {
+    display: none;
+}
 
 /* header banner  */
 .header-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-collapse::after {
+    top: 5px;
+}
+
+.nav-collapse::before {
+    top: 10px;
 }
 
 .banner-sub-title {
@@ -213,6 +227,7 @@ header {
 
 .resume-content-container {
     display: flex;
+    align-items: start;
     gap: 24px;
 }
 
@@ -310,4 +325,393 @@ button {
 
 .footer-container button {
     cursor: pointer;
+}
+
+/* Responsive styles  */
+
+@media screen and (max-width: 576px) {
+    header {
+        background-image: none;
+    }
+
+    .nav-logo {
+        font-weight: 700;
+        font-size: 35px;
+    }
+
+    .navbar {
+        padding: 30px 10px;
+
+    }
+
+    .nav-menu {
+        /* list-style: none; */
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        align-items: flex-start;
+        /* gap: 20px; */
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        background-color: #222;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        padding-top: 140px;
+        padding-inline: 20px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu a {
+        color: #fff;
+    }
+
+    .nav-menu .primary-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    #bar,
+    #close {
+        display: initial;
+    }
+
+    #close {
+        position: absolute;
+        top: 70px;
+        font-size: 24px;
+
+    }
+
+    .banner-sub-title {
+        font-size: 25px;
+        line-height: 18px;
+    }
+
+    .banner-btn {
+        margin-bottom: 30px;
+    }
+
+    .banner-btn a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .banner-btn a i {
+        font-size: 14px;
+    }
+
+    /* .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu li:last-child {
+        margin-top: 30px;
+    } */
+
+    .header-banner {
+        padding-inline: 10px;
+
+    }
+
+    .header-banner div {
+        text-align: center;
+    }
+
+    .banner-img {
+        left: 0;
+        width: 100%;
+    }
+
+    .header-banner,
+    .banner-btn {
+        flex-direction: column;
+    }
+
+    .banner-btn {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-title {
+        font-size: 30px;
+
+    }
+
+    /* about  */
+    .about {
+        padding-inline: 10px;
+        padding-block: 20px;
+    }
+
+    .about .section-description {
+        font-size: 14px;
+    }
+
+    .about-info-container {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+
+    }
+
+    /* skills  */
+    .skills-container {
+        flex-direction: column;
+
+    }
+
+    .what-i-do .section-description {
+        max-width: none;
+        padding-inline: 10px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* resume section */
+    .resume-content-container {
+        flex-direction: column;
+        gap: 30px;
+        padding-inline: 10px;
+    }
+
+    .resume .section-title {
+        margin-bottom: 50px;
+
+    }
+
+    /* footer  */
+
+    footer {
+        padding: 40px 0;
+    }
+
+    .footer-container {
+        /* display: flex; */
+        gap: 20px;
+        flex-direction: column;
+        padding-inline: 10px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    .header-banner div {
+        text-align: center;
+    }
+
+    header {
+        background-image: none;
+    }
+
+    .nav-logo {
+        font-size: 40px;
+    }
+
+    .banner-sub-title {
+        font-size: 26px;
+        line-height: 20px;
+    }
+
+    .banner-title {
+        font-size: 50px;
+    }
+
+    .banner-btn {
+        margin-bottom: 20px;
+    }
+
+    .banner-btn a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+
+
+    .banner-description {
+        max-width: 600px;
+    }
+
+    #bar {
+        font-size: 24px;
+
+    }
+
+    .navbar {
+        padding-inline: 10px;
+    }
+
+    .nav-menu {
+        /* list-style: none; */
+        display: flex;
+        flex-direction: column;
+        justify-self: flex-start;
+        align-items: flex-start;
+        /* gap: 20px; */
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #222;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        padding-top: 140px;
+        padding-inline: 20px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu a {
+        color: #fff;
+    }
+
+    #bar,
+    #close {
+        display: initial;
+    }
+
+    #close {
+        position: absolute;
+        top: 70px;
+        font-size: 24px;
+
+    }
+
+    /*  .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        margin-bottom: 15px;
+    }
+
+    .nav-menu li:last-child {
+        margin-top: 40px;
+    } */
+
+    .header-banner {
+        padding-inline: 20px;
+
+    }
+
+    .banner-img {
+        left: 0;
+        width: 100%;
+    }
+
+    .header-banner,
+    .banner-btn {
+        flex-direction: column;
+    }
+
+    .banner-btn {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-title {
+        font-size: 30px;
+
+    }
+
+    /* about  */
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about .section-description {
+        font-size: 18px;
+    }
+
+    .about-info-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        /* gap: 20px; */
+        /* justify-content: center; */
+
+    }
+
+    /* skills  */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .what-i-do .section-description {
+        max-width: none;
+        padding-inline: 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .resume-content-container {
+        flex-direction: column;
+        gap: 40px;
+        padding-inline: 20px;
+    }
+
+    .resume .section-title {
+
+        margin-bottom: 50px;
+    }
+
+    /* footer  */
+
+    footer {
+        padding: 60px 0;
+    }
+
+    .footer-container {
+        /* display: flex; */
+        gap: 80px;
+        flex-direction: column;
+        padding-inline: 20px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
+
+.hide {
+    display: none;
 }
